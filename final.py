@@ -13,9 +13,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 from PIL import Image
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
-os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
-
 # Load biến môi trường
 load_dotenv()
 

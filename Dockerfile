@@ -15,6 +15,10 @@ RUN pip install --upgrade pip && \
 # Sao chép toàn bộ mã nguồn vào container
 COPY . .
 
+# Vô hiệu hóa GPU cho TensorFlow
+ENV TF_ENABLE_ONEDNN_OPTS=0
+ENV CUDA_VISIBLE_DEVICES=-1
+
 # Mở cổng 8000 để truy cập API
 EXPOSE 8000
 

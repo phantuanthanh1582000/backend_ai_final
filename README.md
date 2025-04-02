@@ -87,14 +87,14 @@ Sau khi chạy, API sẽ hoạt động tại: `http://localhost:8000`
 - **Mô tả**: Phân tích cảm xúc từ nhận xét của khách hàng.
 - **Body**: `{ "review": "so good" }`
   ```sh
-  curl -X POST "https://backend-ai-final.onrender.com/analyze_review" -H "Content-Type: application/json" -d '{"review": "Sản phẩm rất tốt!"}'
+  curl -X POST "https://backend-ai-final.onrender.com/analyze_review" -H "Content-Type: application/json" -d '{"review": "So Good"}'
   ```
 
 #### 3️⃣ **Gợi ý sản phẩm**
 
 - **Endpoint**: `POST /recommend_products`
 - **Mô tả**: Tìm sản phẩm trong MongoDB theo từ khóa.
-- **Body**: `{ "search_query": "giày thể thao" }`
+- **Body**: `{ "search_query": "iphone" }` (có thể tìm với samsung, asus, macbook, airpod)
   ```sh
   curl -X POST "https://backend-ai-final.onrender.com/recommend_products" -H "Content-Type: application/json" -d '{"search_query": "iphone"}'
   ```
